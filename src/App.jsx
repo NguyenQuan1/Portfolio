@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, useInView } from 'framer-motion';
 import avatar from './public/Avatar.jpg';
 import dolaPreview from './public/dola-restaurant-preview.png';
+import profilePreview from './public/profile-preview.png';
 import {
   Github, Linkedin, Mail, Phone, MapPin,
   Download, ExternalLink, GitBranch, GraduationCap, ChevronRight,
@@ -176,6 +177,36 @@ const DEVICON_CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
 
 const PROJECTS = [
   {
+    id: 'personal-portfolio',
+    file: 'PersonalPortfolio.tsx',
+    title: 'Personal Portfolio',
+    category: ['frontend', 'fullstack'],
+    role: 'Frontend Developer',
+    roleVi: 'Lập trình viên Frontend',
+    demo: 'https://portfolio-nine-delta-8fuz89g2cp.vercel.app/',
+    preview: profilePreview,
+    github: 'https://github.com/NguyenQuan1/Portfolio',
+    desc: 'Interactive developer portfolio with an editor-inspired interface, bilingual content, theme switching, project filters, and an AI assistant.',
+    descVi: 'Portfolio cá nhân tương tác với giao diện lấy cảm hứng từ trình soạn thảo code, hỗ trợ song ngữ, đổi theme, lọc dự án và trợ lý AI.',
+    features: [
+      'Editor-inspired portfolio interface with animated sections',
+      'Vietnamese and English language switching',
+      'Dark and soft light theme modes',
+      'Project category filters and detailed case-study modals',
+      'Built-in portfolio AI assistant and contact form',
+    ],
+    featuresVi: [
+      'Giao diện portfolio lấy cảm hứng từ code editor với animation',
+      'Chuyển đổi ngôn ngữ Tiếng Việt và English',
+      'Chế độ tối và sáng dịu mắt',
+      'Bộ lọc dự án và modal xem chi tiết case study',
+      'Trợ lý AI và form liên hệ tích hợp trong portfolio',
+    ],
+    techDetails: 'React, Vite, Tailwind CSS, Framer Motion, Lucide React',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'UX/UI'],
+    color: 'violet',
+  },
+  {
     id: 'dola-restaurant',
     file: 'DolaRestaurant.tsx',
     title: 'Dola Restaurant',
@@ -183,7 +214,7 @@ const PROJECTS = [
     role: 'Full Stack Developer',
     roleVi: 'Lập trình viên Full Stack',
     demo: 'https://dola-restaurant-psi.vercel.app/',
-    github: 'https://github.com/NguyenTrongQuan/dola-restaurant',
+    github: 'https://github.com/NguyenQuan1/Dola-restaurant',
     preview: dolaPreview,
     desc: 'Full-stack restaurant management platform with real-time table reservation, dish ordering, and comprehensive administrative backoffice.',
     descVi: 'Hệ thống quản lý nhà hàng toàn diện: đặt bàn trực tuyến, gọi món theo danh mục và trang quản trị doanh thu, món ăn, hóa đơn.',
@@ -202,7 +233,7 @@ const PROJECTS = [
       'Giao diện tương thích mượt mà trên cả máy tính và điện thoại',
     ],
     techDetails: 'React, Vite, NestJS, TypeORM / Prisma, MySQL, Tailwind CSS, Framer Motion',
-    tags: ['React', 'NestJS', 'MySQL', 'Tailwind CSS', 'JWT'],
+    tags: ['React', 'NestJS', 'MySQL', 'Tailwind CSS', 'JWT', 'Socket.IO'],
     color: 'emerald',
   },
   {
@@ -269,7 +300,7 @@ const PROJECTS = [
 
 const EXPERIENCE = [
   {
-    hash: 'a3f9c1',
+    hash: '3',
     role: 'Full Stack Developer',
     roleVi: 'Lập trình viên Full Stack',
     place: 'Freelance & Independent Projects',
@@ -281,7 +312,7 @@ const EXPERIENCE = [
     color: 'emerald',
   },
   {
-    hash: '7b2e0d',
+    hash: '2',
     role: 'Backend Developer Intern (Project)',
     roleVi: 'Thực tập sinh Backend (Dự án thực tế)',
     place: 'Tech Solutions Co. / Practice Project',
@@ -293,7 +324,7 @@ const EXPERIENCE = [
     color: 'sky',
   },
   {
-    hash: '1c4a88',
+    hash: '1',
     role: 'Web Developer Student',
     roleVi: 'Sinh viên Lập trình Web',
     place: 'FPT Polytechnic Da Nang',
