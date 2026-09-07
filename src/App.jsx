@@ -46,11 +46,11 @@ const NAV_ITEMS = [
 const UI = {
   en: {
     sayHi: '$ contact',
-    internship: 'open to internship opportunities',
+    internship: 'open to fresher opportunities',
     greeting: "Hi, I'm",
     role: 'Full Stack Developer',
-    progress: 'Intern in progress',
-    intro: "I build modern web applications and learn something new every day — currently seeking a full-time internship where I can contribute to real-world products.",
+    progress: 'Fresher seeking full-time role',
+    intro: "I build modern web applications and learn something new every day — currently seeking a full-time fresher position where I can contribute to real-world products.",
     viewProjects: 'View Projects',
     downloadCv: 'Download CV',
     previewCv: 'Preview CV',
@@ -68,7 +68,7 @@ const UI = {
     education: 'Education',
     certificates: 'Certificates & Honors',
     contactTitle: "Let's talk.",
-    contactText: "I'm actively seeking an internship opportunity to learn from an experienced engineering team. Feel free to reach out anytime — I reply promptly.",
+    contactText: "I'm actively seeking a fresher opportunity to grow with an experienced engineering team. Feel free to reach out anytime — I reply promptly.",
     email: 'Email',
     call: 'Call',
     copy: 'Copy',
@@ -77,14 +77,14 @@ const UI = {
     messageSent: 'Message sent successfully! Quan will get back to you soon.',
     namePlaceholder: 'Your Name or Company...',
     emailPlaceholder: 'your.email@example.com',
-    messagePlaceholder: 'Tell me about your internship opening, team or project...',
+    messagePlaceholder: 'Tell me about your fresher opening, team or project...',
     available: 'available',
     focus: 'web products + UX/UI',
     location: 'Da Nang, VN',
     profileRole: 'full_stack_developer',
     noProblems: 'no problems',
     online: 'online',
-    internReady: 'intern-ready',
+    internReady: 'fresher-ready',
     inspectTag: 'click to inspect',
     openInMail: 'or open in Mail client',
     language: 'VI',
@@ -98,15 +98,15 @@ const UI = {
     soundOff: 'Sound: OFF',
     skillGroups: { frontend: 'frontend', backend: 'backend', tools: 'tools', workflow: 'workflow' },
     aiAssistantTitle: 'Dev Assistant AI',
-    aiGreeting: "Hi! I'm Quan's Portfolio Assistant. Ask me anything about his tech stack, featured projects, or internship readiness!",
+    aiGreeting: "Hi! I'm Quan's Portfolio Assistant. Ask me anything about his tech stack, featured projects, or fresher readiness!",
   },
   vi: {
     sayHi: '$ liên-hệ',
-    internship: 'đang tìm cơ hội thực tập',
+    internship: 'đang tìm cơ hội fresher',
     greeting: 'Xin chào, tôi là',
     role: 'Lập trình viên Full Stack',
-    progress: 'Đang tìm vị trí thực tập',
-    intro: 'Tôi xây dựng các sản phẩm web và luôn học thêm điều mới mỗi ngày — hiện đang tìm một kỳ thực tập để biến sự tò mò đó thành sản phẩm thực tế.',
+    progress: 'Fresher tìm vị trí toàn thời gian',
+    intro: 'Tôi xây dựng các sản phẩm web và luôn học thêm điều mới mỗi ngày — hiện đang tìm vị trí fresher để biến sự tò mò đó thành sản phẩm thực tế.',
     viewProjects: 'Xem dự án',
     downloadCv: 'Tải CV',
     previewCv: 'Xem nhanh CV',
@@ -124,7 +124,7 @@ const UI = {
     education: 'Học vấn',
     certificates: 'Chứng chỉ & Thành tích',
     contactTitle: 'Hãy cùng trao đổi.',
-    contactText: 'Tôi đang tìm một kỳ thực tập để học hỏi từ đội ngũ thực tế và cùng tạo ra sản phẩm. Hãy liên hệ với tôi, tôi sẽ phản hồi nhanh.',
+    contactText: 'Tôi đang tìm cơ hội fresher để học hỏi từ đội ngũ thực tế và cùng tạo ra sản phẩm. Hãy liên hệ với tôi, tôi sẽ phản hồi nhanh.',
     email: 'Email',
     call: 'Gọi điện',
     copy: 'Sao chép',
@@ -133,14 +133,14 @@ const UI = {
     messageSent: 'Đã gửi lời nhắn thành công! Quân sẽ phản hồi sớm nhất.',
     namePlaceholder: 'Tên của bạn hoặc quý công ty...',
     emailPlaceholder: 'email.cua.ban@congty.com',
-    messagePlaceholder: 'Nội dung trao đổi về cơ hội thực tập hoặc dự án...',
+    messagePlaceholder: 'Nội dung trao đổi về cơ hội fresher hoặc dự án...',
     available: 'sẵn sàng',
     focus: 'sản phẩm web + UX/UI',
     location: 'Đà Nẵng, VN',
     profileRole: 'lap_trinh_vien_full_stack',
     noProblems: 'không có lỗi',
     online: 'trực tuyến',
-    internReady: 'sẵn sàng thực tập',
+    internReady: 'fresher sẵn sàng',
     inspectTag: 'nhấp để xem chi tiết',
     openInMail: 'hoặc mở qua ứng dụng Email',
     language: 'EN',
@@ -313,8 +313,8 @@ const EXPERIENCE = [
   },
   {
     hash: '2',
-    role: 'Backend Developer Intern (Project)',
-    roleVi: 'Thực tập sinh Backend (Dự án thực tế)',
+    role: 'Backend Developer Fresher (Project)',
+    roleVi: 'Fresher Backend (Dự án thực tế)',
     place: 'Tech Solutions Co. / Practice Project',
     placeVi: 'Tech Solutions Co. / Dự án Thực hành',
     period: '2024 — 2025',
@@ -406,9 +406,9 @@ const AI_KNOWLEDGE_BASE = [
     answerEn: `You can reach Quan directly via:\n• Email: ${CONTACT_INFO.email}\n• Phone: ${CONTACT_INFO.phoneDisplay}\n• GitHub: ${CONTACT_INFO.github}\n• LinkedIn: ${CONTACT_INFO.linkedin}\nQuan responds promptly and is ready for online or in-person interviews!`,
   },
   {
-    triggers: ['thực tập', 'intern', 'thời gian', 'khi nào', 'bắt đầu', 'start'],
-    answerVi: 'Quân đã tốt nghiệp tại FPT Polytechnic và hiện đang sẵn sàng (Available) để bắt đầu thực tập toàn thời gian ngay lập tức!',
-    answerEn: 'Quan has graduated from FPT Polytechnic and is currently Available to start a full-time internship immediately!',
+    triggers: ['fresher', 'intern', 'thời gian', 'khi nào', 'bắt đầu', 'start'],
+    answerVi: 'Quân đã tốt nghiệp tại FPT Polytechnic và hiện đang sẵn sàng (Available) để bắt đầu làm việc toàn thời gian với vai trò fresher ngay lập tức!',
+    answerEn: 'Quan has graduated from FPT Polytechnic and is currently Available to start a full-time fresher position immediately!',
   },
   {
     triggers: ['học vấn', 'education', 'gpa', 'trường', 'fpt', 'bằng cấp'],
@@ -721,7 +721,7 @@ function CVModal({ lang, onClose, onDownload }) {
             </div>
             <div className="flex items-center gap-2">
               <span className="px-3 py-1 rounded-full text-xs font-mono border border-emerald-800 bg-emerald-950 text-emerald-300">
-                ● {isVi ? 'Sẵn sàng nhận việc thực tập' : 'Ready for Internship'}
+                ● {isVi ? 'Sẵn sàng làm việc fresher' : 'Ready as Fresher'}
               </span>
             </div>
           </div>
@@ -1539,7 +1539,7 @@ export default function App() {
                       {'  '}<span className="text-rose-300">name</span><span className="text-gray-500">:</span> <span className="text-amber-300">"Nguyễn Trọng Quân"</span><span className="text-gray-500">,</span>{'\n'}
                       {'  '}<span className="text-rose-300">role</span><span className="text-gray-500">:</span> <span className="text-amber-300">"{isVi ? 'Lập trình viên Full Stack' : 'Full Stack Developer'}"</span><span className="text-gray-500">,</span>{'\n'}
                       {'  '}<span className="text-rose-300">education</span><span className="text-gray-500">:</span> <span className="text-amber-300">"FPT Polytechnic (GPA 3.44)"</span><span className="text-gray-500">,</span>{'\n'}
-                      {'  '}<span className="text-rose-300">status</span><span className="text-gray-500">:</span> <span className="text-emerald-400">"{isVi ? 'sẵn sàng nhận việc thực tập' : 'ready for full-time internship'}"</span><span className="text-gray-500">,</span>{'\n'}
+                      {'  '}<span className="text-rose-300">status</span><span className="text-gray-500">:</span> <span className="text-emerald-400">"{isVi ? 'sẵn sàng làm việc fresher' : 'ready for full-time fresher role'}"</span><span className="text-gray-500">,</span>{'\n'}
                       {'  '}<span className="text-rose-300">focus</span><span className="text-gray-500">:</span> <span className="text-gray-300">[</span><span className="text-amber-300">"NestJS"</span><span className="text-gray-500">,</span> <span className="text-amber-300">"React"</span><span className="text-gray-500">,</span> <span className="text-amber-300">"Clean Code"</span><span className="text-gray-300">]</span><span className="text-gray-500">,</span>{'\n'}
                       {'  '}<span className="text-rose-300">learning</span><span className="text-gray-500">:</span> <span className="text-amber-300">"{isVi ? 'học công nghệ mới mỗi ngày' : 'new tech stack everyday'}"</span><span className="text-gray-500">,</span>{'\n'}
                       {'  '}<span className="text-rose-300">goal</span><span className="text-gray-500">:</span> <span className="text-amber-300">"{isVi ? 'xây dựng sản phẩm web chất lượng' : 'build high-impact web products'}"</span>{'\n'}
