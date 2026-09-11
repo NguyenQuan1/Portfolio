@@ -25,7 +25,7 @@ const CONTACT_INFO = {
   locationEn: 'Da Nang, Vietnam',
   github: 'https://github.com/NguyenTrongQuan',
   linkedin: 'https://www.linkedin.com/in/nguyentrongquan/',
-  cvUrl: '/Nguyen_Trong_Quan_CV.pdf',
+  cvUrl: '/NGUYENTRONGQUAN_CV.pdf',
   school: 'FPT Polytechnic Đà Nẵng',
   schoolEn: 'FPT Polytechnic Da Nang',
   highSchool: 'THPT Hướng Hoá',
@@ -314,11 +314,11 @@ const EXPERIENCE = [
   {
     hash: '2',
     role: 'Backend Developer Fresher (Project)',
-    roleVi: 'Fresher Backend (Dự án thực tế)',
-    place: 'Tech Solutions Co. / Practice Project',
-    placeVi: 'Tech Solutions Co. / Dự án Thực hành',
-    period: '2024 — 2025',
-    periodVi: '2024 — 2025',
+    roleVi: 'Inter Backend ',
+    place: 'Sticky QR / Practice Project',
+    placeVi: 'Sticky QR / Dự án Thực hành',
+    period: '2025 — 2026',
+    periodVi: '2025 — 2026',
     desc: 'Designed RESTful APIs, optimized database schemas, and collaborated on seamless frontend integration.',
     descVi: 'Thiết kế RESTful API, tối ưu hoá cấu trúc database và phối hợp tích hợp mượt mà với frontend.',
     color: 'sky',
@@ -329,8 +329,8 @@ const EXPERIENCE = [
     roleVi: 'Sinh viên Lập trình Web',
     place: 'FPT Polytechnic Da Nang',
     placeVi: 'FPT Polytechnic Đà Nẵng',
-    period: '2023 — 2024',
-    periodVi: '2023 — 2024',
+    period: '2023 — 2025',
+    periodVi: '2023 — 2025',
     desc: 'Graduated in Web Programming (GPA 3.44/4.0), mastering JavaScript, PHP, NestJS, and relational database design.',
     descVi: 'Tốt nghiệp chuyên ngành Lập trình Web tại FPT Polytechnic Đà Nẵng (GPA 3.44/4.0), làm chủ JavaScript, PHP, NestJS và CSDL.',
     color: 'amber',
@@ -663,7 +663,7 @@ function SkillsTicker() {
   );
 }
 
-/* ---------------- CV Quick Preview Modal ---------------- */
+/* ---------------- CV Quick Preview Modal (PDF Viewer) ---------------- */
 function CVModal({ lang, onClose, onDownload }) {
   const isVi = lang === 'vi';
   return (
@@ -675,19 +675,20 @@ function CVModal({ lang, onClose, onDownload }) {
       onClick={onClose}
     >
       <motion.div
-        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl border border-gray-800 bg-gray-950 text-gray-200 shadow-2xl"
+        className="relative w-full max-w-4xl flex flex-col rounded-xl border border-gray-800 bg-gray-950 text-gray-200 shadow-2xl"
+        style={{ height: '90vh' }}
         initial={{ scale: 0.92, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.92, y: 20 }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Editor Title Bar */}
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-800 bg-gray-900/90 px-4 py-2.5 backdrop-blur">
+        <div className="flex-shrink-0 flex items-center justify-between border-b border-gray-800 bg-gray-900/90 px-4 py-2.5 rounded-t-xl backdrop-blur">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
             <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-            <span className="ml-2 font-mono text-xs text-gray-400">Nguyen_Trong_Quan_CV.pdf — Viewer</span>
+            <span className="ml-2 font-mono text-xs text-gray-400">NGUYENTRONGQUAN_CV.pdf — Viewer</span>
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -706,80 +707,13 @@ function CVModal({ lang, onClose, onDownload }) {
           </div>
         </div>
 
-        {/* CV Document Body */}
-        <div className="p-6 sm:p-8 space-y-6 font-sans">
-          {/* CV Header */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-gray-800">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-100">{CONTACT_INFO.name}</h2>
-              <p className="text-emerald-400 font-mono text-sm font-semibold mt-0.5">{isVi ? CONTACT_INFO.roleVi : CONTACT_INFO.role}</p>
-              <p className="text-xs text-gray-400 mt-2 flex flex-wrap gap-x-4 gap-y-1">
-                <span>📍 {isVi ? CONTACT_INFO.location : CONTACT_INFO.locationEn}</span>
-                <span>✉️ {CONTACT_INFO.email}</span>
-                <span>📞 {CONTACT_INFO.phoneDisplay}</span>
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="px-3 py-1 rounded-full text-xs font-mono border border-emerald-800 bg-emerald-950 text-emerald-300">
-                ● {isVi ? 'Sẵn sàng làm việc fresher' : 'Ready as Fresher'}
-              </span>
-            </div>
-          </div>
-
-          {/* Education */}
-          <div>
-            <h3 className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <GraduationCap className="w-4 h-4" /> {isVi ? 'Học vấn' : 'Education'}
-            </h3>
-            <div className="rounded-lg border border-gray-800/80 bg-gray-900/40 p-4">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-100">{isVi ? CONTACT_INFO.school : CONTACT_INFO.schoolEn}</h4>
-                  <p className="text-xs text-gray-400">{isVi ? 'Chuyên ngành: Lập trình Web' : 'Major: Web Programming'}</p>
-                </div>
-                <span className="text-xs font-mono text-gray-500">2023 — 2025</span>
-              </div>
-              <p className="text-xs font-semibold text-emerald-400 mt-2">
-                GPA: {CONTACT_INFO.gpa} ({isVi ? 'Tốt nghiệp loại Giỏi' : 'Graduated with Honors'})
-              </p>
-            </div>
-          </div>
-
-          {/* Skills */}
-          <div>
-            <h3 className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <Code2 className="w-4 h-4" /> {isVi ? 'Kỹ năng chuyên môn' : 'Technical Skills'}
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-3 text-xs">
-              <div className="p-3 rounded-lg border border-gray-800/80 bg-gray-900/40">
-                <p className="font-mono text-sky-400 font-semibold mb-1">Frontend</p>
-                <p className="text-gray-300">React, Vue.js, TypeScript, JavaScript (ES6+), Tailwind CSS, Figma</p>
-              </div>
-              <div className="p-3 rounded-lg border border-gray-800/80 bg-gray-900/40">
-                <p className="font-mono text-emerald-400 font-semibold mb-1">Backend & Database</p>
-                <p className="text-gray-300">NestJS, Node.js, Express.js, PHP/Laravel, MySQL, RESTful API</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Projects */}
-          <div>
-            <h3 className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-              <Layers className="w-4 h-4" /> {isVi ? 'Dự án nổi bật' : 'Featured Projects'}
-            </h3>
-            <div className="space-y-3">
-              {PROJECTS.map((p) => (
-                <div key={p.id} className="p-4 rounded-lg border border-gray-800/80 bg-gray-900/40">
-                  <div className="flex justify-between items-center mb-1">
-                    <h4 className="text-sm font-semibold text-gray-100">{p.title}</h4>
-                    <span className="text-[11px] font-mono text-emerald-400">{p.tags.slice(0, 3).join(' · ')}</span>
-                  </div>
-                  <p className="text-xs text-gray-400 leading-relaxed">{isVi ? p.descVi : p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* PDF iframe */}
+        <iframe
+          src={`${CONTACT_INFO.cvUrl}#toolbar=1&view=FitH`}
+          title="CV PDF Viewer"
+          className="flex-1 w-full rounded-b-xl bg-gray-900"
+          style={{ border: 'none', minHeight: 0 }}
+        />
       </motion.div>
     </motion.div>
   );
